@@ -1,0 +1,44 @@
+2023-09-04 14:06:09,661 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:12,582 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:13,690 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:15,194 INFO  [main] Clicking on element trello.loginPage.loginButton
+2023-09-04 14:06:18,208 INFO  [main] Clicking on element trello.loginPage.loginSubmitButton
+2023-09-04 14:06:24,480 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:24,512 INFO  [main] Clicking on element trello.header.create.menuButton
+2023-09-04 14:06:25,128 INFO  [main] Clicking on element trello.header.createBoard.dropDownButton
+2023-09-04 14:06:26,479 INFO  [main] Clicking on element trello.create.board.submitButton
+2023-09-04 14:06:26,533 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:27,976 INFO  [main] Quitting WebDriver
+2023-09-04 14:06:28,168 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:30,099 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:31,146 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:32,254 INFO  [main] Clicking on element trello.loginPage.loginButton
+2023-09-04 14:06:34,624 INFO  [main] Clicking on element trello.loginPage.loginSubmitButton
+2023-09-04 14:06:39,927 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:39,937 INFO  [main] Clicking on element trello.boardPage.specificBoardXpath
+2023-09-04 14:06:40,779 INFO  [main] Clicking on element trello.boardPage.addCardButton
+2023-09-04 14:06:40,929 INFO  [main] Clicking on element trello.boardPage.outsideClick
+2023-09-04 14:06:40,991 INFO  [main] Quitting WebDriver
+2023-09-04 14:06:41,125 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:43,027 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:44,335 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:46,239 INFO  [main] Clicking on element trello.loginPage.loginButton
+2023-09-04 14:06:48,869 INFO  [main] Clicking on element trello.loginPage.loginSubmitButton
+2023-09-04 14:06:54,127 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:54,159 INFO  [main] Clicking on element trello.boardPage.specificBoardXpath
+2023-09-04 14:06:55,489 INFO  [main] Quitting WebDriver
+2023-09-04 14:06:55,658 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:57,622 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:58,582 INFO  [main] Initializing WebDriver
+2023-09-04 14:06:59,619 INFO  [main] Clicking on element trello.loginPage.loginButton
+2023-09-04 14:07:02,240 INFO  [main] Clicking on element trello.loginPage.loginSubmitButton
+2023-09-04 14:07:08,487 INFO  [main] Initializing WebDriver
+2023-09-04 14:07:08,497 INFO  [main] Clicking on element trello.boardPage.specificBoardXpath
+2023-09-04 14:07:08,768 INFO  [main] Clicking on element trello.boardPage.boardMenuButtonXpath
+2023-09-04 14:07:08,854 INFO  [main] Clicking on element trello.boardPage.moreButtonXpath
+2023-09-04 14:07:09,452 INFO  [main] Clicking on element trello.boardPage.closeBoardButtonXpath
+2023-09-04 14:07:09,528 INFO  [main] Clicking on element trello.boardPage.confirmCloseBoardButtonXpath
+2023-09-04 14:07:11,150 INFO  [main] Clicking on element trello.boardPage.permanentlyDeleteBoardButtonXpath
+2023-09-04 14:07:11,226 INFO  [main] Clicking on element trello.boardPage.confirmDeleteBoardButtonXpath
+2023-09-04 14:07:11,263 INFO  [main] Initializing WebDriver
+2023-09-04 14:07:11,277 INFO  [main] Quitting WebDriver

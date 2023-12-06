@@ -1,0 +1,585 @@
+{
+	"info": {
+		"_postman_id": "2610eb93-f493-4ba1-a4a0-cb7533395fe7",
+		"name": "TestingJiraWeb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28703650"
+	},
+	"item": [
+		{
+			"name": "Get Story",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ATATT3xFfGF0bUhf21bmbMVC7zSK4UEZ4O-xOQYl3WbHqdvF89ieFmacKtq_31z0u7WZTkz4L00-vAiJhpENZz0iKjIMe92BAed3RaWC3m0ZgJuqwS8NhBePVvjP7Zq5O8ECQRK4J3qI0DuJdeRZcB3pAaL7ADRpcV8mrJ3IBLEoUMBFlgZItds=A31441BC",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "krasenkochev89@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://trainingsoftuni1.atlassian.net/rest/api/3/issue/TSTNGWB-1",
+					"protocol": "https",
+					"host": [
+						"trainingsoftuni1",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"3",
+						"issue",
+						"TSTNGWB-1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Email",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Check e-mail address\",function() {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].emailAdress).to.eql(pm.collectionVariables.get(\"email\"));\r",
+							"});\r",
+							"var jsonData = pm.response.json();\r",
+							"console.log(jsonData[0].accountid);\r",
+							"pm.collectionVariables.set(\"accountid\",jsonData[0].accountid);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ATATT3xFfGF0bUhf21bmbMVC7zSK4UEZ4O-xOQYl3WbHqdvF89ieFmacKtq_31z0u7WZTkz4L00-vAiJhpENZz0iKjIMe92BAed3RaWC3m0ZgJuqwS8NhBePVvjP7Zq5O8ECQRK4J3qI0DuJdeRZcB3pAaL7ADRpcV8mrJ3IBLEoUMBFlgZItds=A31441BC",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "krasenkochev89@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://trainingsoftuni1.atlassian.net/rest/api/3/user/search?query=krasenkochev89@gmail.com",
+					"protocol": "https",
+					"host": [
+						"trainingsoftuni1",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"3",
+						"user",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "krasenkochev89@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  See the Story",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ATATT3xFfGF0bUhf21bmbMVC7zSK4UEZ4O-xOQYl3WbHqdvF89ieFmacKtq_31z0u7WZTkz4L00-vAiJhpENZz0iKjIMe92BAed3RaWC3m0ZgJuqwS8NhBePVvjP7Zq5O8ECQRK4J3qI0DuJdeRZcB3pAaL7ADRpcV8mrJ3IBLEoUMBFlgZItds=A31441BC",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "krasenkochev89@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://trainingsoftuni1.atlassian.net/rest/api/3/issue/TSTNGWB-10",
+					"protocol": "https",
+					"host": [
+						"trainingsoftuni1",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"3",
+						"issue",
+						"TSTNGWB-10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  See the Bug",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ATATT3xFfGF0bUhf21bmbMVC7zSK4UEZ4O-xOQYl3WbHqdvF89ieFmacKtq_31z0u7WZTkz4L00-vAiJhpENZz0iKjIMe92BAed3RaWC3m0ZgJuqwS8NhBePVvjP7Zq5O8ECQRK4J3qI0DuJdeRZcB3pAaL7ADRpcV8mrJ3IBLEoUMBFlgZItds=A31441BC",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "krasenkochev89@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://trainingsoftuni1.atlassian.net/rest/api/3/issue/TSTNGWB-11",
+					"protocol": "https",
+					"host": [
+						"trainingsoftuni1",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"3",
+						"issue",
+						"TSTNGWB-11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Story From Postman",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});\r",
+							"pm.test(\"check if it have the type of story\", function(){\r",
+							"    const jsonData = pm.response.json();\r",
+							"    // ToDo\r",
+							"    // pm.expect(jsonData.name).to.have.property(\"Story\");\r",
+							"\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ATATT3xFfGF0bUhf21bmbMVC7zSK4UEZ4O-xOQYl3WbHqdvF89ieFmacKtq_31z0u7WZTkz4L00-vAiJhpENZz0iKjIMe92BAed3RaWC3m0ZgJuqwS8NhBePVvjP7Zq5O8ECQRK4J3qI0DuJdeRZcB3pAaL7ADRpcV8mrJ3IBLEoUMBFlgZItds=A31441BC",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "krasenkochev89@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fields\": {\r\n      \"project\":\r\n      {\r\n          \"key\": \"TSTNGWB\"\r\n      },\r\n\"summary\": \"Change the language of the site to German\",\r\n\r\n\"description\": {\r\n          \"type\": \"doc\",\r\n          \"version\": 1,\r\n          \"content\": [\r\n            {\r\n              \"type\": \"paragraph\",\r\n              \"content\": [\r\n                {\r\n                  \"type\": \"text\",\r\n                  \"text\": \"As a German end User, I would like to see the site in my German language, so that I can navigate and use it effectively.\"\r\n                }\r\n              ]\r\n            }\r\n          ]\r\n        },\r\n\"issuetype\":{\r\n    \"name\": \"Story\"\r\n}\r\n}\r\n}\r\n\r\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://trainingsoftuni1.atlassian.net/rest/api/3/issue",
+					"protocol": "https",
+					"host": [
+						"trainingsoftuni1",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"3",
+						"issue"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post A Bug",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ATATT3xFfGF0bUhf21bmbMVC7zSK4UEZ4O-xOQYl3WbHqdvF89ieFmacKtq_31z0u7WZTkz4L00-vAiJhpENZz0iKjIMe92BAed3RaWC3m0ZgJuqwS8NhBePVvjP7Zq5O8ECQRK4J3qI0DuJdeRZcB3pAaL7ADRpcV8mrJ3IBLEoUMBFlgZItds=A31441BC",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "krasenkochev89@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fields\": {\r\n      \"project\":\r\n      {\r\n          \"key\": \"TSTNGWB\"\r\n      },\r\n\"summary\": \"Change the language of the site to German\",\r\n\r\n\"description\": {\r\n          \"type\": \"doc\",\r\n          \"version\": 1,\r\n          \"content\": [\r\n            {\r\n              \"type\": \"paragraph\",\r\n              \"content\": [\r\n                {\r\n                  \"type\": \"text\",\r\n                  \"text\": \"Summary:\\n As a User, I want to change the language from English to German,\\nSteps to Reproduce:\\nNavigate to home page : https://www.phptravels.net/en\\nSelect the “German” language icon from the drop-down menu for language selection.\\nClick on it.\\nExpected Result:\\nThe User should be able to see the content of the page in German language.\\nActual Result:\\nThe User should be able to see the content of the page in German language, however the page stays in English language.\\nEnvironment\\nMozilla Firefox 2019 08 10 10 07 53\\nOS - Windows 10 Pro N, 19044.2486 build, Windows Feature Experience Pack 120.2212.4190.0, Version - 21H2.\"\r\n                }\r\n              ]\r\n            }\r\n          ]\r\n        },\r\n\r\n\"issuetype\":{\r\n    \"name\": \"Bug\"\r\n}\r\n}\r\n}\r\n\r\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://trainingsoftuni1.atlassian.net/rest/api/3/issue",
+					"protocol": "https",
+					"host": [
+						"trainingsoftuni1",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"3",
+						"issue"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Link The Story and the Bug",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ATATT3xFfGF0bUhf21bmbMVC7zSK4UEZ4O-xOQYl3WbHqdvF89ieFmacKtq_31z0u7WZTkz4L00-vAiJhpENZz0iKjIMe92BAed3RaWC3m0ZgJuqwS8NhBePVvjP7Zq5O8ECQRK4J3qI0DuJdeRZcB3pAaL7ADRpcV8mrJ3IBLEoUMBFlgZItds=A31441BC",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "krasenkochev89@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"type\": {\r\n\r\n        \"name\": \"Blocks\",\r\n\r\n        \"inward\": \"is blocked by\",\r\n\r\n        \"outward\": \"blocks\"\r\n\r\n    },\r\n\r\n    \"inwardIssue\": {\r\n\r\n        \"key\": \"TSTNGWB-11\"\r\n\r\n    },\r\n\r\n    \"outwardIssue\": {\r\n\r\n        \"key\": \"TSTNGWB-10\"\r\n\r\n    }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://trainingsoftuni1.atlassian.net/rest/api/3/issueLink",
+					"protocol": "https",
+					"host": [
+						"trainingsoftuni1",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"3",
+						"issueLink"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Image",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Test data type of the responce\",() =>{\r",
+							"    const jsonData = pm.response.json();\r",
+							"\r",
+							"    // pm.expect(jsonData.displayName).to.be.a(\"string\");\r",
+							"    // pm.expect(jsonData.id).to.be.a(\"number\");\r",
+							"    // pm.expect(jsonData.email).to.not.be.null;\r",
+							"    pm.expect(jsonData.filename).to.not.be.null;\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ATATT3xFfGF0bUhf21bmbMVC7zSK4UEZ4O-xOQYl3WbHqdvF89ieFmacKtq_31z0u7WZTkz4L00-vAiJhpENZz0iKjIMe92BAed3RaWC3m0ZgJuqwS8NhBePVvjP7Zq5O8ECQRK4J3qI0DuJdeRZcB3pAaL7ADRpcV8mrJ3IBLEoUMBFlgZItds=A31441BC",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "krasenkochev89@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					},
+					{
+						"key": "X-Atlassian-Token",
+						"value": "nocheck",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"contentType": "",
+							"description": "Random Image",
+							"type": "file",
+							"src": "/C:/Users/K.Kochev/Downloads/Funny Pics and Memes/aRrMm9B_700b.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://trainingsoftuni1.atlassian.net/rest/api/2/issue/TSTNGWB-11/attachments",
+					"protocol": "https",
+					"host": [
+						"trainingsoftuni1",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						"TSTNGWB-11",
+						"attachments"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "accountid",
+			"value": ""
+		}
+	]
+}
